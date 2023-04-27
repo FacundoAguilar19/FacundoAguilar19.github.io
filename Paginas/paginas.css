@@ -1,0 +1,38 @@
+body{
+    font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif; 
+    /* Fuente sacada de la pagina de AMD*/
+    margin: 0;
+}
+header{
+    background-color: rgb(44, 44, 44);
+}
+header .logo{
+    color: orange;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+    padding: 25px 30px;
+
+}
+header .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 15px;
+}
+header nav{
+display: flex;
+flex-direction: row;
+text-align: center;
+padding-bottom: 0px;
+}
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+header a:hover{
+    color: orange;
+}

@@ -26,6 +26,8 @@ ul{font-size: 1.25em;}
 }
 header{
     background-color: rgb(44, 44, 44);
+    
+    width: 100%;
 }
 header .logo{
     color: orange;
@@ -37,14 +39,16 @@ header .logo{
 }
 header .container{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    padding-right: 15px;
 }
 header nav{
 display: flex;
-flex-direction: column;
+flex-direction: row;
 text-align: center;
-padding-bottom: 25px;
+padding-bottom: 0px;
 }
 header a{
     padding: 5px 12px;
@@ -60,7 +64,7 @@ header a:hover{
     align-items: center;
     text-align: center;
     flex-direction: column;
-    height: 90vh;
+    height: 60vh;
     background-image: url("Media/imagen2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
