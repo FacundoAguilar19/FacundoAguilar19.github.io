@@ -54,7 +54,7 @@ header a{
     padding: 5px 12px;
     text-decoration: none;
     font-weight: bold;
-    color: black;
+    color: white;
 }
 header a:hover{
     color: orange;
@@ -79,5 +79,8 @@ header a:hover{
 color: white;
 
 
+}
+li{
+    list-style: none; 
 }
 
