@@ -4,6 +4,8 @@
 <head>
     <title>Atajos que te pueden servir!</title>
     <link rel="stylesheet" href="index.css">
+    
+
 </head>
 
 <body>
@@ -12,8 +14,8 @@
             <p class="logo">Tituloquetengoquecambiar</p>
             <nav>
                 <a href="index.html">Inicio</a>
-                <a href="contacto.html">Contactos</a>
-                <a href="#">Sobre mi</a>
+                <a href="contacto.html">Contacto</a>
+
             </nav>
         </div>
 
@@ -91,6 +93,39 @@
 
         </ul>
     </div>
+    <script>
+        var i = 0;
+        var imagenes = [];
+        var tiempo = 2000;
+
+
+        imagenes[0] = "1.jpg";
+        imagenes[1] = "2.jpg";
+        imagenes[2] = "3.jpg";
+        
+
+
+
+        function cambiarImg() {
+            document.cambio.src = imagenes[i];
+
+
+            if (i < imagenes.length - 1) {
+                i++;
+            } else {
+                i = 0;
+            }
+
+            setTimeout("cambiarImg()", tiempo);
+        }
+
+        window.onload = cambiarImg;
+    </script>
+    <div class="centrar">
+        <img name="cambio" width="500" height="500" />
+    </div>
+    
+
 
     <footer>
         <div class="container">

@@ -2,11 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
     <link rel="stylesheet" href="contacto.css">
+    <script defer src="contacto.js"></script>
 </head>
 
 <body>
@@ -15,30 +13,31 @@
             <p class="logo">Tituloquetengoquecambiar</p>
             <nav>
                 <a href="index.html">Inicio</a>
-                <a href="contacto.html">Contactos</a>
-                <a href="#">Sobre mi</a>
+                <a href="contacto.html">Contacto</a>
+
             </nav>
         </div>
 
     </header>
 
-    <form>
+    <form action="" id="formulario">
         <h2>Contacto</h2>
         <div class="input-group">
             <label for="name">Nombre</label>
-            <input type="text" name="name" id="name" placeholder="Nombre">
+            <input type="text" id="name" placeholder="Nombre">
 
             <label for="phone">Telefono</label>
-            <input type="telefono" name="phone" placeholder="Telefono">
+            <input type="phone" id="phone" placeholder="Telefono">
 
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="Email">
+            <input type="email"id="email" placeholder="Email">
 
             <label for="message">Mensaje</label>
             <textarea name="message" id="message" cols="30" rows="5" placeholder="Mensaje"></textarea>
 
-            <input class="btn" type="submit" value="Enviar">
+             <input type="submit" value="Enviar"> 
         </div>
+        <div id='error'></div>
 
 
 
