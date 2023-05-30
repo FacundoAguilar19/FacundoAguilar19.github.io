@@ -4,7 +4,7 @@
 <head>
     <title>Atajos que te pueden servir!</title>
     <link rel="stylesheet" href="index.css">
-    
+
 
 </head>
 
@@ -82,7 +82,7 @@
     </section>
     <section id="Atajos"></section>
     <div class="container">
-        <p>Atajos del teclado De Windows a saber</p>
+        <h3><strong>Atajos del teclado De Windows a saber</strong></h3>
         <ul>
             <li>Ctrl+c = Copiar</li>
             <li>Ctrl+v = Pegar</li>
@@ -99,17 +99,12 @@
         var imagenes = [];
         var tiempo = 2000;
 
-
         imagenes[0] = "1.jpg";
         imagenes[1] = "2.jpg";
         imagenes[2] = "3.jpg";
-        
-
-
 
         function cambiarImg() {
-            document.cambio.src = imagenes[i];
-
+            document.getElementsByName("cambio")[0].src = imagenes[i];
 
             if (i < imagenes.length - 1) {
                 i++;
@@ -117,16 +112,39 @@
                 i = 0;
             }
 
-            setTimeout("cambiarImg()", tiempo);
+            setTimeout(cambiarImg, tiempo);
         }
 
         window.onload = cambiarImg;
+
+        function siguienteImagen() {
+            if (i < imagenes.length - 1) {
+                i++;
+            } else {
+                i = 0;
+            }
+
+            document.getElementsByName("cambio")[0].src = imagenes[i];
+        }
+
+        function imagenAnterior() {
+            if (i > 0) {
+                i--;
+            } else {
+                i = imagenes.length - 1;
+            }
+
+            document.getElementsByName("cambio")[0].src = imagenes[i];
+        }
     </script>
+
     <div class="centrar">
         <img name="cambio" width="500" height="500" />
     </div>
-    
-
+    <div class="botones">
+        <button onclick="imagenAnterior()">Anterior</button>
+        <button onclick="siguienteImagen()">Siguiente</button>
+    </div>
 
     <footer>
         <div class="container">
