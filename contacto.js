@@ -16,7 +16,7 @@ form.addEventListener("submit",function(evento){
  
  if (telefono.value === '' || isNaN(telefono.value) || telefono.value.length !== 10) {
     errores.push("Ingrese su teléfono correctamente");
-    errores.push("El teléfono debe tener 10 caracteres");
+    errores.push("El teléfono debe tener 10 numeros");
   }
   if (email.value === '' || !validarEmail(email.value)) {
     errores.push("Ingrese su correo electrónico correctamente");
