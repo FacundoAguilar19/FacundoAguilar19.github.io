@@ -43,10 +43,10 @@ form.addEventListener("submit", function (evento) {
       var datosEnLinea = `${dato.nombre}, ${dato.telefono}, ${dato.email}, ${dato.mensaje}`;
       datosIngresados.push(datosEnLinea);
     }
-    
-      datosIngresadosDiv.innerHTML = `<h3>Gracias por contactarte con nosotros:</h3><p>${datosIngresados.join('<br>')}</p>`;
 
-      datosIngresadosDiv.style.color = "orange";
+    datosIngresadosDiv.innerHTML = `<h3>Gracias por contactarte con nosotros:</h3><p>${datosIngresados.join('<br>')}</p>`;
+
+    datosIngresadosDiv.style.color = "orange";
 
     nombre.value = '';
     telefono.value = '';
@@ -54,7 +54,7 @@ form.addEventListener("submit", function (evento) {
     mensaje.value = '';
     console.log("Formulario enviado correctamente")
   }
- 
+
   error.innerHTML = errores.join(', ');
 
 });
