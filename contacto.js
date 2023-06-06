@@ -8,6 +8,7 @@ error.style.color = "orange";
 
 var form = document.getElementById("formulario");
 var datosRecibidos = [];
+nombre.focus();
 form.addEventListener("submit", function (evento) {
 
   evento.preventDefault();
@@ -42,8 +43,10 @@ form.addEventListener("submit", function (evento) {
       var datosEnLinea = `${dato.nombre}, ${dato.telefono}, ${dato.email}, ${dato.mensaje}`;
       datosIngresados.push(datosEnLinea);
     }
-    datosIngresadosDiv.textContent = datosIngresados.join(',<br> ');
-    datosIngresadosDiv.style.color = "orange";
+    
+      datosIngresadosDiv.innerHTML = `<h3>Gracias por contactarte con nosotros:</h3><p>${datosIngresados.join('<br>')}</p>`;
+
+      datosIngresadosDiv.style.color = "orange";
 
     nombre.value = '';
     telefono.value = '';
