@@ -3,6 +3,7 @@ body {
     /* Fuente sacada de la página de AMD */
     margin: 0;
     background-color: rgb(44, 44, 44);
+    
 }
 
 form {
@@ -13,10 +14,10 @@ form {
     padding: 20px;
     box-shadow: 0 0 20px orange;
     border-radius: 20px;
-    width: 400px;
+    width: 300px;
     background-color: rgb(44, 44, 44);
     flex-direction: column;
-
+    padding-bottom: 10px
 }
 .input-group{
     margin-top: 10px;
@@ -29,7 +30,7 @@ h2{
     margin-left: 50px;
     margin-right: 70px;
     color: orange;
-    font-size: 35px;
+    font-size: 20px;
 }
 label{
     color: orange;
@@ -43,6 +44,9 @@ input, textarea{
     margin-bottom: 20px;
     background-color: white
 
+}
+p{
+    color: orange;
 }
 #form button {
     padding: 10px;
