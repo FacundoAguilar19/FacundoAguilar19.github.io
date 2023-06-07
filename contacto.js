@@ -37,15 +37,17 @@ form.addEventListener("submit", function (evento) {
     };
     datosRecibidos.push(datos);
     var datosIngresadosDiv = document.getElementById('datosIngresados');
-    var datosIngresados = [];
+    datosIngresadosDiv.innerHTML = '';
+
     for (var i = 0; i < datosRecibidos.length; i++) {
       var dato = datosRecibidos[i];
-      var datosEnLinea = `${dato.nombre}, ${dato.telefono}, ${dato.email}, ${dato.mensaje}`;
-      datosIngresados.push(datosEnLinea);
+      var datosEnLinea = document.createElement('p');
+      datosEnLinea.textContent = `${dato.nombre}, ${dato.telefono}, ${dato.email}, ${dato.mensaje}`;
+      datosIngresadosDiv.appendChild(datosEnLinea);
     }
-
-    datosIngresadosDiv.innerHTML = `<h3>Gracias por contactarte con nosotros:</h3><p>${datosIngresados.join('<br>')}</p>`;
-
+    var graciasMensaje = document.createElement('h3');
+    graciasMensaje.textContent = "Gracias por contactarte con nosotros:";
+    datosIngresadosDiv.prepend(graciasMensaje);
     datosIngresadosDiv.style.color = "orange";
 
     nombre.value = '';
